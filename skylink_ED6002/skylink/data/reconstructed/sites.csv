@@ -1,0 +1,32 @@
+site_id,name,type,x_km,y_km,candidate_hub
+H0,District Hospital Kaveripuram,district hospital,29.0,21.0,yes
+H1,SDH Nallur,sub-district hospital,10.0,36.0,yes
+H2,SDH Vadakarai,sub-district hospital,48.0,38.5,yes
+H3,SDH Thenpatti,sub-district hospital,8.0,8.5,yes
+H4,SDH Kizhakkur,sub-district hospital,36.0,5.5,yes
+H5,SDH Melmalai,sub-district hospital,27.0,40.5,yes
+H6,SDH Kadalpuram,sub-district hospital,51.0,6.0,yes
+P01,PHC Ammapettai,PHC,5.0,41.0,no
+P02,PHC Ellaipuram,PHC,16.5,42.0,no
+P03,PHC Kovilur,PHC,21.0,35.5,no
+P04,PHC Manjakuppam,PHC,4.0,28.0,no
+P05,PHC Pudhur,PHC,9.0,21.5,no
+P06,PHC Selvapuram,PHC,3.5,13.0,no
+P07,PHC Thirumalai,PHC,14.0,3.0,no
+P08,PHC Vellakulam,PHC,20.5,11.0,no
+P09,PHC Arasampatti,PHC,17.5,6.5,yes
+P10,PHC Chinnur,PHC,27.5,13.5,no
+P11,PHC Elumalai,PHC,30.5,29.5,no
+P12,PHC Kalyanapuram,PHC,34.0,43.0,no
+P13,PHC Mangadu,PHC,38.5,34.0,no
+P14,PHC Nedungal,PHC,41.0,42.5,no
+P15,PHC Oothukadu,PHC,55.0,43.0,no
+P16,PHC Periyakulam,PHC,56.0,32.0,no
+P17,PHC Rasipalayam,PHC,58.5,23.5,no
+P18,PHC Sendurai,PHC,54.0,14.5,no
+P19,PHC Thiruvadi,PHC,46.0,11.0,no
+P20,PHC Udayarpalayam,PHC,31.0,4.0,no
+P21,PHC Valavanur,PHC,38.0,15.0,no
+P22,PHC Vengai,PHC,24.5,30.0,no
+P23,PHC Kattur,PHC,16.5,23.0,no
+P24,PHC Puliyur,PHC,44.0,2.0,no
