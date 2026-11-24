@@ -1,0 +1,281 @@
+{
+ "V1": {
+  "cost": 24751759.984233547,
+  "hubs": {
+   "H0": {
+    "phcs": [
+     "P10",
+     "P11",
+     "P13",
+     "P20",
+     "P22"
+    ],
+    "drones": 4,
+    "bays": 3,
+    "operators_per_shift": 1
+   },
+   "H1": {
+    "phcs": [
+     "P01",
+     "P02",
+     "P03",
+     "P04",
+     "P23"
+    ],
+    "drones": 4,
+    "bays": 2,
+    "operators_per_shift": 1
+   },
+   "H2": {
+    "phcs": [
+     "P12",
+     "P14",
+     "P15",
+     "P16"
+    ],
+    "drones": 4,
+    "bays": 2,
+    "operators_per_shift": 1
+   },
+   "H3": {
+    "phcs": [
+     "P05",
+     "P06",
+     "P07",
+     "P08",
+     "P09"
+    ],
+    "drones": 4,
+    "bays": 2,
+    "operators_per_shift": 1
+   },
+   "H6": {
+    "phcs": [
+     "P17",
+     "P18",
+     "P19",
+     "P21",
+     "P24"
+    ],
+    "drones": 4,
+    "bays": 2,
+    "operators_per_shift": 1
+   }
+  },
+  "road_only": [],
+  "blood_mode": "relay",
+  "blood_hub": "H0",
+  "blood_from_H0": [],
+  "blood_by_road": [],
+  "blood_frac": 0.0,
+  "resupply": {
+   "H1": {
+    "mode": "drone",
+    "route": [
+     "H0",
+     "H5",
+     "H1"
+    ],
+    "km": 37.2
+   },
+   "H2": {
+    "mode": "road",
+    "route": [
+     "H0",
+     "H2"
+    ],
+    "km": 25.8
+   },
+   "H3": {
+    "mode": "drone",
+    "route": [
+     "H0",
+     "P09",
+     "H3"
+    ],
+    "km": 28.3
+   },
+   "H6": {
+    "mode": "drone",
+    "route": [
+     "H0",
+     "H4",
+     "H6"
+    ],
+    "km": 32.0
+   }
+  },
+  "breakdown": {
+   "hubs": 3464708.553942604,
+   "drones_and_spares": 8819745.639605198,
+   "bays": 261159.5059867978,
+   "operators": 7560000.0,
+   "energy_wear_and_weather_road": 3953651.752936252,
+   "road_only_PHCs": 0.0,
+   "blood_by_drone": 0.0,
+   "blood_by_road": 0.0,
+   "blood_resupply": 692494.5317626927
+  },
+  "vp": {
+   "R_km": 22.4682907762928,
+   "V": 18.022170410441145,
+   "MTOW": 12.925551046112314,
+   "E_Wh": 1065.6,
+   "Euse_Wh": 724.608,
+   "Pcl": 1079.5617525416826,
+   "Pce": 906.9753707835895,
+   "Phl": 1249.6915074606043,
+   "Phe": 949.7644084389937
+  },
+  "x": [
+   0.762,
+   1065.6,
+   0.04,
+   0.002,
+   18.022170410441145
+  ],
+  "relays": [
+   "H4",
+   "H5",
+   "P09"
+  ],
+  "relay_P09_used": true,
+  "cost_milp": 24789265.452470854
+ },
+ "V1_H0forced": {
+  "cost": 24751759.984233547,
+  "hubs": {
+   "H0": {
+    "phcs": [
+     "P10",
+     "P11",
+     "P13",
+     "P20",
+     "P22"
+    ],
+    "drones": 4,
+    "bays": 3,
+    "operators_per_shift": 1
+   },
+   "H1": {
+    "phcs": [
+     "P01",
+     "P02",
+     "P03",
+     "P04",
+     "P23"
+    ],
+    "drones": 4,
+    "bays": 2,
+    "operators_per_shift": 1
+   },
+   "H2": {
+    "phcs": [
+     "P12",
+     "P14",
+     "P15",
+     "P16"
+    ],
+    "drones": 4,
+    "bays": 2,
+    "operators_per_shift": 1
+   },
+   "H3": {
+    "phcs": [
+     "P05",
+     "P06",
+     "P07",
+     "P08",
+     "P09"
+    ],
+    "drones": 4,
+    "bays": 2,
+    "operators_per_shift": 1
+   },
+   "H6": {
+    "phcs": [
+     "P17",
+     "P18",
+     "P19",
+     "P21",
+     "P24"
+    ],
+    "drones": 4,
+    "bays": 2,
+    "operators_per_shift": 1
+   }
+  },
+  "road_only": [],
+  "blood_mode": "relay",
+  "blood_hub": "H0",
+  "blood_from_H0": [],
+  "blood_by_road": [],
+  "blood_frac": 0.0,
+  "resupply": {
+   "H1": {
+    "mode": "drone",
+    "route": [
+     "H0",
+     "H5",
+     "H1"
+    ],
+    "km": 37.2
+   },
+   "H2": {
+    "mode": "road",
+    "route": [
+     "H0",
+     "H2"
+    ],
+    "km": 25.8
+   },
+   "H3": {
+    "mode": "drone",
+    "route": [
+     "H0",
+     "P09",
+     "H3"
+    ],
+    "km": 28.3
+   },
+   "H6": {
+    "mode": "drone",
+    "route": [
+     "H0",
+     "H4",
+     "H6"
+    ],
+    "km": 32.0
+   }
+  },
+  "breakdown": {
+   "hubs": 3464708.553942604,
+   "drones_and_spares": 8819745.6396052,
+   "bays": 261159.5059867978,
+   "operators": 7560000.0,
+   "energy_wear_and_weather_road": 3953651.752936252,
+   "road_only_PHCs": 0.0,
+   "blood_by_drone": 0.0,
+   "blood_by_road": 0.0,
+   "blood_resupply": 692494.5317626927
+  },
+  "vp": {
+   "R_km": 22.4682907762928,
+   "V": 18.022170410441145,
+   "MTOW": 12.925551046112314,
+   "E_Wh": 1065.6,
+   "Euse_Wh": 724.608,
+   "Pcl": 1079.5617525416826,
+   "Pce": 906.9753707835895,
+   "Phl": 1249.6915074606043,
+   "Phe": 949.7644084389937
+  },
+  "relays": [
+   "H4",
+   "H5",
+   "P09"
+  ],
+  "relay_P09_used": true,
+  "cost_milp": 24789265.452470854
+ }
+}

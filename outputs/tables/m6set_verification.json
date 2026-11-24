@@ -1,0 +1,77 @@
+{
+ "design": "R22",
+ "sub_hubs": [
+  "H0",
+  "H3",
+  "H4",
+  "H6"
+ ],
+ "sub_phcs": [
+  "P06",
+  "P07",
+  "P08",
+  "P10",
+  "P19",
+  "P20",
+  "P21",
+  "P24"
+ ],
+ "milp": 7977650.017986929,
+ "brute_force": 7977650.017986929,
+ "n_enumerated": 82944,
+ "rel_diff": 0.0,
+ "milp_assign": {
+  "cost": 7977650.017986929,
+  "hubs": {
+   "H3": {
+    "phcs": [
+     "P06",
+     "P07",
+     "P08"
+    ],
+    "drones": 2,
+    "bays": 2,
+    "operators_per_shift": 1
+   },
+   "H4": {
+    "phcs": [
+     "P10",
+     "P19",
+     "P20",
+     "P21",
+     "P24"
+    ],
+    "drones": 3,
+    "bays": 2,
+    "operators_per_shift": 1
+   }
+  },
+  "road_only": [],
+  "blood_mode": "relay",
+  "blood_hub": "H0",
+  "blood_from_H0": [],
+  "blood_by_road": [],
+  "blood_frac": 0.0,
+  "resupply": {
+   "H3": "road",
+   "H4": "drone"
+  }
+ },
+ "bf_assign": {
+  "P06": "H3",
+  "P07": "H3",
+  "P08": "H3",
+  "P10": "H4",
+  "P19": "H4",
+  "P20": "H4",
+  "P21": "H4",
+  "P24": "H4"
+ },
+ "sub_LP_gap_pct": 3.252356327962179,
+ "wind": {
+  "w_design": 6.4,
+  "w_mean": 4.024459736810334,
+  "grounded_frac": 0.054452054794520546
+ },
+ "bigM_note": "N_max_j = ceil(peak-hour drone-minutes of ALL range-feasible PHCs / (0.7*60)) + 1: no feasible solution can need more, so the constraint n_j <= N_max_j y_j never cuts off a feasible point, and it is the smallest such M (tightest LP)."
+}

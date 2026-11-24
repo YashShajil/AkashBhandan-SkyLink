@@ -354,7 +354,7 @@ def run(designs: pd.DataFrame, m_plate, fm, tag="m4", make_figs=True):
     # verification on a 4-hub, 8-PHC sub-instance (middle design)
     mid = designs.index[len(designs) // 2]
     vp = vehicle_params(designs.loc[mid], m_plate, fm)
-    sub_h = ["H0", "H3", "H4"]; sub_p = ["P06", "P07", "P08", "P10", "P20", "P21"]
+    sub_h = ["H0", "H3", "H4", "H6"]; sub_p = ["P06", "P07", "P08", "P10", "P19", "P20", "P21", "P24"]   # brief: 4 hubs, 8 PHCs
     Ms = build(vp, ws, sub_h, sub_p); rs = solve(Ms); bf, bch, ncomb = brute_force(Ms)
     rsl = solve(Ms, relax=True)
     ver = dict(design=mid, sub_hubs=sub_h, sub_phcs=sub_p, milp=rs.fun, brute_force=bf, n_enumerated=ncomb,

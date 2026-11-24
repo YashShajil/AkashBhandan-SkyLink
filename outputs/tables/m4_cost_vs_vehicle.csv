@@ -1,0 +1,2 @@
+design,MTOW_kg,R_still_km,Lmax_design_wind_km,annual_cost_MINR,MILP_cost_MINR,LP_relax_MINR,LP_gap_pct,n_hubs,hubs,drones,bays,road_only_PHCs,feasible_pairs,mip_status,cost_if_H0_forced_MINR,hubs_if_H0_forced
+V1,12.925551046112314,22.4682907762928,19.634839167607506,24.751759984233548,24.789265452470854,23.30697279806374,5.979574736690584,5,H0 H1 H2 H3 H6,20,11,0,47,Optimization terminated successfully. (HiGHS Status 7: Optimal),24.751759984233548,H0 H1 H2 H3 H6

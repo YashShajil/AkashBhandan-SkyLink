@@ -1,0 +1,118 @@
+{
+ "data_sources": {
+  "sites.csv": "real",
+  "nofly.geojson": "real",
+  "demand.csv": "real",
+  "hourly_profile.csv": "real",
+  "wind_days.csv": "real",
+  "costs.yaml": "real",
+  "components.csv": "real"
+ },
+ "audit_items": 2,
+ "M1_base": {
+  "MTOW_kg": 6.616958225694521,
+  "R_req": 10.0,
+  "mdf_idf_rel": 1.5331680459369693e-09,
+  "kg_MTOW_per_100g": 0.14178000788764386,
+  "kg_per_100g_reopt": 0.14175226175669486,
+  "km_per_100g": 0.5515032752426924,
+  "km_per_100g_reopt": 0.5502753800636209,
+  "active": [
+   "natural frequency",
+   "d/t slenderness",
+   "radius requirement"
+  ],
+  "uncapped_R": 27.276845732756424,
+  "uncapped_MTOW": 20.147076561738608
+ },
+ "M2": {
+  "volfrac": 0.3,
+  "plate_kg": 0.102208
+ },
+ "M1_plate": {
+  "MTOW_kg": 6.37749139410395,
+  "dMTOW_kg": -0.2394668315905708
+ },
+ "M3": {
+  "mock": true,
+  "n_points": 30,
+  "replicate_noise_sd": 0.005197705469469999,
+  "kriging_nugget_sd": 0.004341569926637386,
+  "best_by_loocv": "RBF (thin-plate, smoothed)",
+  "DL_trust_limit": 139.58378336700676,
+  "n_excluded_nonsmooth": 4
+ },
+ "M1_final": {
+  "MTOW_kg": 6.246448924876061,
+  "x": {
+   "D_m": 0.5983309066038925,
+   "E_Wh": 245.86554898918666,
+   "d_mm": 35.876195915503246,
+   "t_mm": 0.8969048978875813,
+   "V_ms": 13.64908772734107,
+   "MTOW_kg": 6.246448924876061,
+   "R_km": 9.999999999999986,
+   "Tmax_N": 30.638831976517082,
+   "P_hover_loaded_W": 521.4907779650786,
+   "P_cruise_loaded_W": 455.599392507116,
+   "P_cruise_empty_W": 301.489421846164,
+   "FM_loaded": 0.6917028841213221,
+   "FM_empty": 0.6715595013411017
+  },
+  "shift_vs_plate": {
+   "dMTOW_kg": -0.1310424692278893,
+   "dV": 0.01962719360699161,
+   "dE": -4.930777136111288,
+   "dD": -0.04760915366113072
+  },
+  "mdf_idf_rel": 1.9917862161833555e-09,
+  "km_per_100g": 0.5827125200181251,
+  "kg_MTOW_per_100g": 0.1384443906001146,
+  "max_disk_loading": 54.48410499987991,
+  "within_FM_trust_region": true
+ },
+ "M4": {
+  "best": "V1",
+  "cost": {
+   "V1": 48.788637699512485
+  },
+  "brute_force_match": true,
+  "LP_gaps": {
+   "V1": 0.9737819958500451
+  },
+  "H0_forced_cost": 49.51283714613308
+ },
+ "M5": {
+  "days_for_CI": 48,
+  "S45": 0.352211016291699,
+  "hw": 0.02644532050382436,
+  "P95": 120.0,
+  "mmc_rel_err": [
+   -0.00400259848472273,
+   -0.027444294689018767,
+   -0.01858723182280786
+  ]
+ },
+ "M6": {
+  "n_front": 11,
+  "knee": {
+   "source": "nsga3",
+   "vehicle": "V1",
+   "cost_MINR": 51.38545537882015,
+   "S45": 0.32193732193732194,
+   "road_share": 0.6457958165950963,
+   "reserve": 0.0,
+   "drones": 7,
+   "bays": 5,
+   "spares": 6,
+   "hubs": 5,
+   "P95_em_min": 120.0,
+   "knee": true
+  }
+ },
+ "M7": {
+  "chosen": 6,
+  "rule": "minimax regret in S45 across calm/typical/worst weeks (no candidate met the service rule)",
+  "system": "V1"
+ }
+}

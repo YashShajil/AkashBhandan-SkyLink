@@ -1,0 +1,114 @@
+{
+ "mmc": [
+  {
+   "c": 1,
+   "lam_per_hr": 2.0,
+   "mean_service_min": 20.0,
+   "rho": 0.6666666666666666,
+   "P_wait": 0.6666666666666666,
+   "Wq_theory_min": 39.99999999999999,
+   "Wq_sim_min": 39.83989606061108,
+   "Wq_sim_ci95": 0.7667470236190422,
+   "rel_err": -0.00400259848472273,
+   "reps": 40,
+   "horizon_hr": 4000
+  },
+  {
+   "c": 3,
+   "lam_per_hr": 6.0,
+   "mean_service_min": 24.0,
+   "rho": 0.8,
+   "P_wait": 0.6471910112359552,
+   "Wq_theory_min": 25.887640449438216,
+   "Wq_sim_min": 25.177172416140472,
+   "Wq_sim_ci95": 0.71138883397509,
+   "rel_err": -0.027444294689018767,
+   "reps": 40,
+   "horizon_hr": 4000
+  },
+  {
+   "c": 5,
+   "lam_per_hr": 10.0,
+   "mean_service_min": 25.0,
+   "rho": 0.8333333333333333,
+   "P_wait": 0.6201471747166333,
+   "Wq_theory_min": 18.604415241498987,
+   "Wq_sim_min": 18.258610662477466,
+   "Wq_sim_ci95": 0.41384444936773634,
+   "rel_err": -0.01858723182280786,
+   "reps": 40,
+   "horizon_hr": 4000
+  }
+ ],
+ "ci": {
+  "days": 48,
+  "S45": 0.9533227848101266,
+  "S45_halfwidth": 0.029281503995509373,
+  "P95_em_min": 29.57908509058744,
+  "S45_blood": NaN,
+  "S45_antivenom": 0.9533227848101266,
+  "mean_em_min": 19.90341054188112,
+  "util": 0.2163438067240704,
+  "road_share": 0.022290302133953097,
+  "energy_kWh_day": 84.70833333333333,
+  "genset_kWh_day": 12.732812500000001,
+  "road_cost_day": 4572.916666666667,
+  "n_days": 48,
+  "by_class": [
+   {
+    "order_type": "emergency (antivenom etc.)",
+    "orders_per_day": 26.333333333333332,
+    "flown_pct": 95.49050632911393,
+    "road_pct": 4.5094936708860756,
+    "mean_min": 19.90341054188112,
+    "P95_min": 29.57908509058744,
+    "within_45min_pct": 95.33227848101265,
+    "within_6h_pct": 100.0
+   },
+   {
+    "order_type": "routine supplies",
+    "orders_per_day": 95.33333333333333,
+    "flown_pct": 98.49213286713287,
+    "road_pct": 1.507867132867133,
+    "mean_min": 42.03073612466373,
+    "P95_min": 192.44275097604037,
+    "within_45min_pct": 82.05856643356644,
+    "within_6h_pct": 99.16958041958041
+   },
+   {
+    "order_type": "lab samples PHC->hub",
+    "orders_per_day": 75.54166666666667,
+    "flown_pct": 97.65581908439052,
+    "road_pct": 2.344180915609487,
+    "mean_min": 55.12520508588796,
+    "P95_min": 203.213268599135,
+    "within_45min_pct": 71.31825703254275,
+    "within_6h_pct": 99.06232763375621
+   },
+   {
+    "order_type": "blood restock H0->hubs",
+    "orders_per_day": 4.0,
+    "flown_pct": 75.0,
+    "road_pct": 25.0,
+    "mean_min": 65.5173117262192,
+    "P95_min": 120.0,
+    "within_45min_pct": 23.958333333333336,
+    "within_6h_pct": 100.0
+   }
+  ]
+ },
+ "story_day": 145,
+ "story_summary": {
+  "n_em": 31,
+  "n_em_45": 28,
+  "n_orders": 191,
+  "n_road": 3,
+  "n_blood": 0,
+  "n_blood_45": 0,
+  "util": 0.21652971201080662,
+  "energy_grid_kWh": 48.95,
+  "energy_gen_kWh": 36.825,
+  "road_cost": 7500,
+  "grounded_hours": 2
+ }
+}

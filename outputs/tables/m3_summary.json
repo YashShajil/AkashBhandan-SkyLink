@@ -1,0 +1,9 @@
+{
+ "mock": false,
+ "n_points": 30,
+ "replicate_noise_sd": 0.003676955262170074,
+ "kriging_nugget_sd": 0.0077447135015647674,
+ "best_by_loocv": "RBF (thin-plate, smoothed)",
+ "DL_trust_limit": 159.02502068937136,
+ "n_excluded_nonsmooth": 6
+}

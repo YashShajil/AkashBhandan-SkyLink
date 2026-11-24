@@ -1,0 +1,153 @@
+{
+ "candidates": [
+  {
+   "idx": 11,
+   "role": "knee",
+   "source": "nsga2obj",
+   "vehicle": "R26",
+   "cost_MINR": 20.049848413498992,
+   "S45": 0.9541139240506328,
+   "road_share": 0.010116977552956,
+   "reserve": 0.0,
+   "drones": 13.0,
+   "bays": 12.0,
+   "spares": 18.0,
+   "hubs": 4.0,
+   "P95_em_min": 40.57588444578351,
+   "S45_hw": 0.0302031264584544,
+   "knee": 1.0
+  },
+  {
+   "idx": 0,
+   "role": "cheapest with S45>=90% & road<=3%",
+   "source": "nsga3",
+   "vehicle": "R26",
+   "cost_MINR": 19.031774742406547,
+   "S45": 0.944620253164557,
+   "road_share": 0.0225524291284645,
+   "reserve": 0.0,
+   "drones": 10.0,
+   "bays": 11.0,
+   "spares": 16.0,
+   "hubs": 4.0,
+   "P95_em_min": 60.70143821763444,
+   "S45_hw": 0.0329065078015459,
+   "knee": 0.0
+  },
+  {
+   "idx": 17,
+   "role": "best S45 within +15% of knee cost",
+   "source": "nsga2obj",
+   "vehicle": "R20",
+   "cost_MINR": 21.771870789580305,
+   "S45": 0.956487341772152,
+   "road_share": 0.0163347033407102,
+   "reserve": 0.05,
+   "drones": 16.0,
+   "bays": 9.0,
+   "spares": 16.0,
+   "hubs": 5.0,
+   "P95_em_min": 29.24480666686121,
+   "S45_hw": 0.0292160453916378,
+   "knee": 0.0
+  }
+ ],
+ "chosen": 17,
+ "rule": "minimax regret in S45 across calm/typical/worst weeks (no candidate met the service rule)",
+ "regret": {
+  "0": 0.01041339970497357,
+  "11": 0.005932437306627292,
+  "17": 0.00012081335266345139
+ },
+ "weeks": {
+  "calm": {
+   "first_day": 40,
+   "grounded_h": 0
+  },
+  "typical": {
+   "first_day": 46,
+   "grounded_h": 4
+  },
+  "worst monsoon": {
+   "first_day": 209,
+   "grounded_h": 67
+  }
+ },
+ "chosen_system": {
+  "vehicle": "R20",
+  "reserve": 0.05,
+  "hubs": {
+   "H0": {
+    "drones": 4.0,
+    "bays": 3.0,
+    "spares": 5,
+    "phcs": [
+     "P10",
+     "P11",
+     "P20",
+     "P21",
+     "P22"
+    ]
+   },
+   "H1": {
+    "drones": 3.0,
+    "bays": 1,
+    "spares": 3,
+    "phcs": [
+     "P01",
+     "P02",
+     "P03",
+     "P04",
+     "P23"
+    ]
+   },
+   "H2": {
+    "drones": 4.0,
+    "bays": 3.0,
+    "spares": 4,
+    "phcs": [
+     "P12",
+     "P13",
+     "P14",
+     "P15",
+     "P16",
+     "P17"
+    ]
+   },
+   "H3": {
+    "drones": 3.0,
+    "bays": 1,
+    "spares": 3,
+    "phcs": [
+     "P05",
+     "P06",
+     "P07",
+     "P08",
+     "P09"
+    ]
+   },
+   "H6": {
+    "drones": 2.0,
+    "bays": 1,
+    "spares": 1,
+    "phcs": [
+     "P18",
+     "P19",
+     "P24"
+    ]
+   }
+  },
+  "road_only": [],
+  "vp": {
+   "R_km": 21.518198173540913,
+   "V": 17.382531989745843,
+   "MTOW": 12.028482488527699,
+   "E_Wh": 976.8,
+   "Euse_Wh": 664.2239999999999,
+   "Pcl": 1005.168787503433,
+   "Pce": 827.7662995973448,
+   "Phl": 1169.0565153095804,
+   "Phe": 867.2418596594267
+  }
+ }
+}

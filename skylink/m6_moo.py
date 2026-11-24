@@ -147,17 +147,15 @@ def run(sols, designs, pop=60, gens=35, procs=2, tag="m6", seed=1):
         res = minimize(Prob(pool), NSGA2(pop_size=pop, sampling=init), ("n_gen", gens), seed=seed, verbose=False, save_history=False)
         X3, F3 = res.X, res.F
         np.savez(os.path.join(tabd, f"{tag}_raw3.npz"), X=X3, F=F3)
-        p2 = min(pop, 40); g2 = min(gens, 20)
-        res2 = minimize(Prob(pool, 2), NSGA2(pop_size=p2, sampling=init[:p2]), ("n_gen", g2), seed=seed + 1, verbose=False)
+        res2 = minimize(Prob(pool, 2), NSGA2(pop_size=40, sampling=init[:40]), ("n_gen", 20), seed=seed + 1, verbose=False)
         X2, F2 = res2.X, res2.F
         np.savez(os.path.join(tabd, f"{tag}_raw2.npz"), X=X2, F=F2)
         FF = np.vstack([F2, F3[:, :2]])                       # normalise on the union (2-obj front may be narrow)
         ref = ((FF[:, 0].min(), FF[:, 0].max()), (FF[:, 1].min(), FF[:, 1].max()))
         ws = []
-        p_ws = max(10, min(16, pop // 2)); g_ws = max(5, min(10, gens // 2))
         for w in (0.15, 0.35, 0.5, 0.65, 0.85):
             p = WS(pool, w, ref)
-            r = minimize(p, GA(pop_size=p_ws, sampling=init[:p_ws]), ("n_gen", g_ws), seed=seed + 7, verbose=False)
+            r = minimize(p, GA(pop_size=16, sampling=init[:16]), ("n_gen", 10), seed=seed + 7, verbose=False)
             ws.append(dict(w=w, cost=float(_f(r.X)[0]), negS45=float(_f(r.X)[1]), x=r.X.tolist()))
     # front table (3-obj)
     rows = []
@@ -254,11 +252,8 @@ def merge_fronts(sols, designs, tag="m6"):
     X = np.vstack(X); src = ["nsga3"] * len(X[0:0])
     rows = []
     n3 = len(np.load(os.path.join(tabd, f"{tag}_raw3.npz"))["X"]); n2 = len(np.load(os.path.join(tabd, f"{tag}_raw2.npz"))["X"])
-    from multiprocessing import Pool
-    procs = max(1, min(8, os.cpu_count() or 1))
-    with Pool(procs, initializer=_init, initargs=(sols, list(designs))) as pool:
-        results = pool.map(eval_one, list(X))
-    for k, ((f, ev), x) in enumerate(zip(results, X)):
+    for k, x in enumerate(X):
+        f, ev = eval_one(x)
         name, sol, spares, r = decode(x)
         rows.append(dict(source="nsga3" if k < n3 else ("nsga2obj" if k < n3 + n2 else "weighted-sum"), vehicle=name, cost_MINR=f[0], S45=-f[1],
                          road_share=f[2], reserve=r, drones=sum(h["drones"] for h in sol["hubs"].values()), bays=sum(h["bays"] for h in sol["hubs"].values()),
@@ -324,7 +319,7 @@ if __name__ == "__main__":
     designs = list(sols)
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     pop, gens = (int(args[0]), int(args[1])) if len(args) > 1 else (60, 35)
-    procs = max(1, min(8, (os.cpu_count() or 2)))
+    procs = max(1, min(4, (os.cpu_count() or 2)))
     print(f"NSGA-II: population {pop}, {gens} generations, {procs} processes, CRN on 48 days")
     run(sols, designs, pop=pop, gens=gens, procs=procs)
     front, allp, wsd = merge_fronts(sols, designs)

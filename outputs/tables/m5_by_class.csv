@@ -1,0 +1,5 @@
+order_type,orders_per_day,flown_pct,road_pct,mean_min,P95_min,within_45min_pct,within_6h_pct
+emergency (antivenom etc.),26.3,95.5,4.5,19.9,29.6,95.3,100.0
+routine supplies,95.3,98.5,1.5,42.0,192.4,82.1,99.2
+lab samples PHC->hub,75.5,97.7,2.3,55.1,203.2,71.3,99.1
+blood restock H0->hubs,4.0,75.0,25.0,65.5,120.0,24.0,100.0

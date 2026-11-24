@@ -25,13 +25,13 @@ RESUPPLY_PER_DAY = 1      # ASSUMPTION (same as M4): restock runs per day to eac
 
 class Config:
     def __init__(self, sol, vp, spares=None, reserve=0.2, demand_mult=1.0, availability=1.0,
-                 routine_wait_max_min=360, em_wait_max_min=90, wind_mode="file", wind_scale=1.0, record=False, weekday_shift=0):
+                 routine_wait_max_min=360, em_wait_max_min=30, wind_mode="file", wind_scale=1.0, record=False, weekday_shift=0):
         self.sol, self.vp = sol, vp
         self.hubs = list(sol["hubs"].keys())
         self.spares = spares if spares is not None else {h: sol["hubs"][h]["drones"] for h in self.hubs}
         self.reserve, self.demand_mult, self.availability = reserve, demand_mult, availability
         self.routine_wait_max = routine_wait_max_min
-        self.em_wait_max = em_wait_max_min      # emergency waits up to 90 min for a drone (road 120 min - flight ~25 min: until then a drone is faster), then road
+        self.em_wait_max = em_wait_max_min      # costs.yaml rule: an emergency still waiting after 30 min goes by road (90 min tested as a sensitivity)
         self.wind_mode, self.wind_scale, self.record = wind_mode, wind_scale, record
         self.weekday_shift = weekday_shift
 

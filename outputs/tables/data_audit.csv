@@ -1,0 +1,3 @@
+file,severity,issue,action
+hourly_profile.csv,fix,"ro shares sum to 1.1993, not 1","renormalised to 1 (keeps the daily mean in demand.csv, which is the stated quantity; the shape is kept, the 20% excess is removed proportionally)"
+wind_days.csv,flag,file has no weekday column; outage days (Mon/Wed/Fri) need the weekday of day 1 (assumed Monday),ASSUMPTION: day 1 = Monday; tested in M7 (outage effect is small)

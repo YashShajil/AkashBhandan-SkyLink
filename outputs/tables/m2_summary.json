@@ -1,0 +1,76 @@
+{
+ "mbb": [
+  {
+   "case": "density filter, p=3, rmin=1.5",
+   "compliance": 218.8032815224735,
+   "iterations": 126,
+   "gray_fraction": 0.3408333333333333,
+   "checkerboard_fraction": 0.003568242640499554
+  },
+  {
+   "case": "sensitivity filter, p=3, rmin=1.5",
+   "compliance": 203.1859488921137,
+   "iterations": 94,
+   "gray_fraction": 0.2125,
+   "checkerboard_fraction": 0.0
+  },
+  {
+   "case": "NO filter, p=3",
+   "compliance": 203.21073527927774,
+   "iterations": 63,
+   "gray_fraction": 0.018333333333333333,
+   "checkerboard_fraction": 0.11507582515611062
+  },
+  {
+   "case": "density filter, p=1",
+   "compliance": 164.67488743994943,
+   "iterations": 34,
+   "gray_fraction": 0.7008333333333333,
+   "checkerboard_fraction": 0.0
+  }
+ ],
+ "mbb_fe_check": {
+  "fe_load_point_deflection": 125.87776347347713,
+  "timoshenko_beam_E": 117.36,
+  "timoshenko_beam_Eprime": 107.64000000000001
+ },
+ "plate_element_check": [
+  {
+   "mesh": "10x10",
+   "w_fe": 0.014363808629209879,
+   "w_theory": 0.015294337440799874,
+   "rel_err": -0.06084139409057854
+  },
+  {
+   "mesh": "20x20",
+   "w_fe": 0.015242112457345879,
+   "w_theory": 0.015294337440799874,
+   "rel_err": -0.00341466138406743
+  },
+  {
+   "mesh": "40x40",
+   "w_fe": 0.015484982404426842,
+   "w_theory": 0.015294337440799874,
+   "rel_err": 0.012465068484653452
+  }
+ ],
+ "simp_sensitivity_check": {
+  "n_elements": 48,
+  "max_abs_err": 0.00029096491007862824,
+  "max_rel_err": 2.8940987920709765e-06
+ },
+ "bolts": {
+  "on": true,
+  "positions_mm": [
+   14.0,
+   34.0
+  ],
+  "hole_r": 2.75,
+  "boss_r": 8.75
+ },
+ "c_solid": 9.005684200173235,
+ "F_total_N": 119.682,
+ "picked_volfrac": 0.3,
+ "picked_plate_mass_kg": 0.102208,
+ "rmin_mm": 6.0
+}

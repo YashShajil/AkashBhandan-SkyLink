@@ -1,0 +1,105 @@
+{
+ "objective": "min MTOW s.t. R >= R_req",
+ "R_req": 22.0,
+ "m_plate": 0.25,
+ "mdf": {
+  "D_m": 0.8,
+  "E_Wh": 890.8658044858928,
+  "d_mm": 39.99999999999999,
+  "t_mm": 1.7242612115822742,
+  "V_ms": 17.287613171728218,
+  "MTOW_kg": 11.80546413536652,
+  "R_km": 21.99999999999991,
+  "Tmax_N": 57.90580158397279,
+  "P_hover_loaded_W": 1046.3606971178635,
+  "P_cruise_loaded_W": 909.1452781091202,
+  "P_cruise_empty_W": 720.2767439205841,
+  "FM_loaded": 0.65,
+  "FM_empty": 0.65
+ },
+ "uncapped_maxR": {
+  "D_m": 0.8,
+  "E_Wh": 2000.0,
+  "d_mm": 39.99999999999999,
+  "t_mm": 2.496411053425681,
+  "V_ms": 22.0,
+  "MTOW_kg": 20.147076561738608,
+  "R_km": 27.276845732756424,
+  "Tmax_N": 98.82141053532787,
+  "P_hover_loaded_W": 2295.9030209074213,
+  "P_cruise_loaded_W": 2007.019728147588,
+  "P_cruise_empty_W": 1739.3770771846123,
+  "FM_loaded": 0.65,
+  "FM_empty": 0.65
+ },
+ "idf": {
+  "D_m": 0.7999999996294324,
+  "E_Wh": 890.8658063486448,
+  "d_mm": 39.99999995282423,
+  "t_mm": 1.7242612199678347,
+  "V_ms": 17.28761318402655,
+  "MTOW_kg": 11.805464150512435,
+  "R_km": 22.00000000670201,
+  "Tmax_N": 57.9058016582635,
+  "P_hover_loaded_W": 1046.360699544574,
+  "P_cruise_loaded_W": 909.1452802626159,
+  "P_cruise_empty_W": 720.2767458013066,
+  "FM_loaded": 0.65,
+  "FM_empty": 0.65
+ },
+ "idf_consistency_residual_kg": 2.4868995751603507e-14,
+ "mdf_idf_rel_diff": 1.282958007490262e-09,
+ "mdf_idf_x_rel_diff": 4.863277338049542e-09,
+ "mdf_nfev": 9,
+ "idf_nfev": 27,
+ "kkt": {
+  "active": [
+   "natural frequency",
+   "radius requirement",
+   "D_m upper bound",
+   "d_m upper bound"
+  ],
+  "lam": {
+   "natural frequency": 5.21351,
+   "radius requirement": 17.37738,
+   "D_m upper bound": 1.92999,
+   "d_m upper bound": 3.55142
+  },
+  "stationarity_resid": 9.910508609702177e-12,
+  "dMTOW_dpayload": 2.2796339651021897,
+  "kg_MTOW_per_100g_payload": 0.227963396510219,
+  "dMTOW_dR_kg_per_km": 0.7898807500675699,
+  "km_lost_per_100g": 0.2886048260964937
+ },
+ "reopt_kg_MTOW_per_100g_payload": 0.228407540273313,
+ "reopt_dMTOW_dR_kg_per_km": 0.7965082497165099,
+ "reopt_km_lost_per_100g": 0.2867610478040961,
+ "equivalence_maxR_at_mstar_km": 21.99999999999989,
+ "equivalence_x_rel_diff": 3.671715979854561e-09,
+ "gradcheck": [
+  {
+   "point": "optimum",
+   "fd_rel_step": 0.0001,
+   "max_abs_err": 0.0012957981156489495,
+   "max_rel_err": 0.06929558275814471
+  },
+  {
+   "point": "optimum",
+   "fd_rel_step": 1e-07,
+   "max_abs_err": 1.8206389029326176e-06,
+   "max_rel_err": 0.00010011672487215971
+  },
+  {
+   "point": "interior",
+   "fd_rel_step": 0.0001,
+   "max_abs_err": 0.0010787050017206923,
+   "max_rel_err": 9.589642619062145e-05
+  },
+  {
+   "point": "interior",
+   "fd_rel_step": 1e-07,
+   "max_abs_err": 9.349365264199605e-07,
+   "max_rel_err": 3.291467775868943e-07
+  }
+ ]
+}

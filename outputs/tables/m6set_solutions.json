@@ -1,0 +1,844 @@
+{
+ "R18": {
+  "cost": 26305271.425761487,
+  "hubs": {
+   "H1": {
+    "phcs": [
+     "P01",
+     "P04",
+     "P05",
+     "P23"
+    ],
+    "drones": 3,
+    "bays": 2,
+    "operators_per_shift": 1
+   },
+   "H2": {
+    "phcs": [
+     "P13",
+     "P14",
+     "P15",
+     "P16"
+    ],
+    "drones": 4,
+    "bays": 2,
+    "operators_per_shift": 1
+   },
+   "H3": {
+    "phcs": [
+     "P06",
+     "P07",
+     "P08",
+     "P09"
+    ],
+    "drones": 3,
+    "bays": 2,
+    "operators_per_shift": 1
+   },
+   "H4": {
+    "phcs": [
+     "P10",
+     "P19",
+     "P20",
+     "P21",
+     "P24"
+    ],
+    "drones": 3,
+    "bays": 2,
+    "operators_per_shift": 1
+   },
+   "H5": {
+    "phcs": [
+     "P02",
+     "P03",
+     "P11",
+     "P12",
+     "P22"
+    ],
+    "drones": 4,
+    "bays": 2,
+    "operators_per_shift": 1
+   }
+  },
+  "road_only": [
+   "P17",
+   "P18"
+  ],
+  "blood_mode": "relay",
+  "blood_hub": "H0",
+  "blood_from_H0": [],
+  "blood_by_road": [
+   "P17",
+   "P18"
+  ],
+  "blood_frac": 0.0,
+  "resupply": {
+   "H1": {
+    "mode": "road",
+    "route": [
+     "H0",
+     "H1"
+    ],
+    "km": 27.1
+   },
+   "H2": {
+    "mode": "road",
+    "route": [
+     "H0",
+     "H2"
+    ],
+    "km": 25.8
+   },
+   "H3": {
+    "mode": "road",
+    "route": [
+     "H0",
+     "H3"
+    ],
+    "km": 26.0
+   },
+   "H4": {
+    "mode": "road",
+    "route": [
+     "H0",
+     "H4"
+    ],
+    "km": 17.0
+   },
+   "H5": {
+    "mode": "road",
+    "route": [
+     "H0",
+     "H5"
+    ],
+    "km": 19.6
+   }
+  },
+  "breakdown": {
+   "hubs": 3464708.553942604,
+   "drones_and_spares": 6227391.90247292,
+   "bays": 237417.73271527054,
+   "operators": 7560000.0,
+   "energy_wear_and_weather_road": 3211178.236630694,
+   "road_only_PHCs": 4692075.0,
+   "blood_by_drone": 0.0,
+   "blood_by_road": 0.0,
+   "blood_resupply": 912500.0
+  },
+  "vp": {
+   "R_km": 18.003408137143964,
+   "V": 16.77518808412473,
+   "MTOW": 10.04660771945343,
+   "E_Wh": 710.4,
+   "Euse_Wh": 483.072,
+   "Pcl": 850.7861216141946,
+   "Pce": 679.4731810690773,
+   "Phl": 951.2332108585466,
+   "Phe": 661.4286754735509
+  },
+  "x": [
+   0.7111999999999999,
+   710.4,
+   0.04,
+   0.0015,
+   16.77518808412473
+  ],
+  "relays": [],
+  "relay_P09_used": false,
+  "cost_milp": 26305271.425761487
+ },
+ "R20": {
+  "cost": 25639708.002270166,
+  "hubs": {
+   "H0": {
+    "phcs": [
+     "P10",
+     "P11",
+     "P20",
+     "P21",
+     "P22"
+    ],
+    "drones": 4,
+    "bays": 2,
+    "operators_per_shift": 1
+   },
+   "H1": {
+    "phcs": [
+     "P01",
+     "P02",
+     "P03",
+     "P04",
+     "P23"
+    ],
+    "drones": 4,
+    "bays": 2,
+    "operators_per_shift": 1
+   },
+   "H2": {
+    "phcs": [
+     "P12",
+     "P13",
+     "P14",
+     "P15",
+     "P16",
+     "P17"
+    ],
+    "drones": 6,
+    "bays": 3,
+    "operators_per_shift": 2
+   },
+   "H3": {
+    "phcs": [
+     "P05",
+     "P06",
+     "P07",
+     "P08",
+     "P09"
+    ],
+    "drones": 4,
+    "bays": 2,
+    "operators_per_shift": 1
+   },
+   "H6": {
+    "phcs": [
+     "P18",
+     "P19",
+     "P24"
+    ],
+    "drones": 2,
+    "bays": 1,
+    "operators_per_shift": 1
+   }
+  },
+  "road_only": [],
+  "blood_mode": "relay",
+  "blood_hub": "H0",
+  "blood_from_H0": [],
+  "blood_by_road": [],
+  "blood_frac": 0.0,
+  "resupply": {
+   "H1": {
+    "mode": "road",
+    "route": [
+     "H0",
+     "H1"
+    ],
+    "km": 27.1
+   },
+   "H2": {
+    "mode": "road",
+    "route": [
+     "H0",
+     "H2"
+    ],
+    "km": 25.8
+   },
+   "H3": {
+    "mode": "drone",
+    "route": [
+     "H0",
+     "P09",
+     "H3"
+    ],
+    "km": 28.3
+   },
+   "H6": {
+    "mode": "drone",
+    "route": [
+     "H0",
+     "H4",
+     "H6"
+    ],
+    "km": 32.0
+   }
+  },
+  "breakdown": {
+   "hubs": 3464708.553942604,
+   "drones_and_spares": 8358277.862539485,
+   "bays": 237417.7327151722,
+   "operators": 9072000.0,
+   "energy_wear_and_weather_road": 3811301.7015473656,
+   "road_only_PHCs": -1.3521340047617514e-06,
+   "blood_by_drone": 0.0,
+   "blood_by_road": 0.0,
+   "blood_resupply": 696002.1515268994
+  },
+  "vp": {
+   "R_km": 21.518198173540913,
+   "V": 17.382531989745843,
+   "MTOW": 12.028482488527699,
+   "E_Wh": 976.8,
+   "Euse_Wh": 664.2239999999999,
+   "Pcl": 1005.168787503433,
+   "Pce": 827.7662995973448,
+   "Phl": 1169.0565153095804,
+   "Phe": 867.2418596594267
+  },
+  "x": [
+   0.7365999999999999,
+   976.8,
+   0.04,
+   0.0015,
+   17.382531989745843
+  ],
+  "relays": [
+   "H4",
+   "P09"
+  ],
+  "relay_P09_used": true,
+  "cost_milp": 25673705.850743268
+ },
+ "R22": {
+  "cost": 24751759.984233547,
+  "hubs": {
+   "H0": {
+    "phcs": [
+     "P10",
+     "P11",
+     "P13",
+     "P20",
+     "P22"
+    ],
+    "drones": 4,
+    "bays": 3,
+    "operators_per_shift": 1
+   },
+   "H1": {
+    "phcs": [
+     "P01",
+     "P02",
+     "P03",
+     "P04",
+     "P23"
+    ],
+    "drones": 4,
+    "bays": 2,
+    "operators_per_shift": 1
+   },
+   "H2": {
+    "phcs": [
+     "P12",
+     "P14",
+     "P15",
+     "P16"
+    ],
+    "drones": 4,
+    "bays": 2,
+    "operators_per_shift": 1
+   },
+   "H3": {
+    "phcs": [
+     "P05",
+     "P06",
+     "P07",
+     "P08",
+     "P09"
+    ],
+    "drones": 4,
+    "bays": 2,
+    "operators_per_shift": 1
+   },
+   "H6": {
+    "phcs": [
+     "P17",
+     "P18",
+     "P19",
+     "P21",
+     "P24"
+    ],
+    "drones": 4,
+    "bays": 2,
+    "operators_per_shift": 1
+   }
+  },
+  "road_only": [],
+  "blood_mode": "relay",
+  "blood_hub": "H0",
+  "blood_from_H0": [],
+  "blood_by_road": [],
+  "blood_frac": 0.0,
+  "resupply": {
+   "H1": {
+    "mode": "drone",
+    "route": [
+     "H0",
+     "H5",
+     "H1"
+    ],
+    "km": 37.2
+   },
+   "H2": {
+    "mode": "road",
+    "route": [
+     "H0",
+     "H2"
+    ],
+    "km": 25.8
+   },
+   "H3": {
+    "mode": "drone",
+    "route": [
+     "H0",
+     "P09",
+     "H3"
+    ],
+    "km": 28.3
+   },
+   "H6": {
+    "mode": "drone",
+    "route": [
+     "H0",
+     "H4",
+     "H6"
+    ],
+    "km": 32.0
+   }
+  },
+  "breakdown": {
+   "hubs": 3464708.553942604,
+   "drones_and_spares": 8819745.639605198,
+   "bays": 261159.5059867978,
+   "operators": 7560000.0,
+   "energy_wear_and_weather_road": 3953651.752936252,
+   "road_only_PHCs": 0.0,
+   "blood_by_drone": 0.0,
+   "blood_by_road": 0.0,
+   "blood_resupply": 692494.5317626927
+  },
+  "vp": {
+   "R_km": 22.4682907762928,
+   "V": 18.022170410441145,
+   "MTOW": 12.925551046112314,
+   "E_Wh": 1065.6,
+   "Euse_Wh": 724.608,
+   "Pcl": 1079.5617525416826,
+   "Pce": 906.9753707835895,
+   "Phl": 1249.6915074606043,
+   "Phe": 949.7644084389937
+  },
+  "x": [
+   0.762,
+   1065.6,
+   0.04,
+   0.002,
+   18.022170410441145
+  ],
+  "relays": [
+   "H4",
+   "H5",
+   "P09"
+  ],
+  "relay_P09_used": true,
+  "cost_milp": 24789265.452470854
+ },
+ "R24": {
+  "cost": 24269813.308968753,
+  "hubs": {
+   "H1": {
+    "phcs": [
+     "P01",
+     "P02",
+     "P04",
+     "P23"
+    ],
+    "drones": 3,
+    "bays": 2,
+    "operators_per_shift": 1
+   },
+   "H2": {
+    "phcs": [
+     "P13",
+     "P14",
+     "P15",
+     "P16",
+     "P17"
+    ],
+    "drones": 4,
+    "bays": 3,
+    "operators_per_shift": 1
+   },
+   "H3": {
+    "phcs": [
+     "P05",
+     "P06",
+     "P07",
+     "P08",
+     "P09"
+    ],
+    "drones": 4,
+    "bays": 2,
+    "operators_per_shift": 1
+   },
+   "H4": {
+    "phcs": [
+     "P10",
+     "P18",
+     "P19",
+     "P20",
+     "P21",
+     "P24"
+    ],
+    "drones": 4,
+    "bays": 3,
+    "operators_per_shift": 1
+   },
+   "H5": {
+    "phcs": [
+     "P03",
+     "P11",
+     "P12",
+     "P22"
+    ],
+    "drones": 3,
+    "bays": 2,
+    "operators_per_shift": 1
+   }
+  },
+  "road_only": [],
+  "blood_mode": "relay",
+  "blood_hub": "H0",
+  "blood_from_H0": [],
+  "blood_by_road": [],
+  "blood_frac": 0.0,
+  "resupply": {
+   "H1": {
+    "mode": "road",
+    "route": [
+     "H0",
+     "H1"
+    ],
+    "km": 27.1
+   },
+   "H2": {
+    "mode": "road",
+    "route": [
+     "H0",
+     "H2"
+    ],
+    "km": 25.8
+   },
+   "H3": {
+    "mode": "road",
+    "route": [
+     "H0",
+     "H3"
+    ],
+    "km": 26.0
+   },
+   "H4": {
+    "mode": "road",
+    "route": [
+     "H0",
+     "H4"
+    ],
+    "km": 17.0
+   },
+   "H5": {
+    "mode": "road",
+    "route": [
+     "H0",
+     "H5"
+    ],
+    "km": 19.6
+   }
+  },
+  "breakdown": {
+   "hubs": 3464708.553942639,
+   "drones_and_spares": 8419231.436480815,
+   "bays": 284901.2792583401,
+   "operators": 7560000.0,
+   "energy_wear_and_weather_road": 3961374.674372255,
+   "road_only_PHCs": 9.168360515232621e-10,
+   "blood_by_drone": 0.0,
+   "blood_by_road": 0.0,
+   "blood_resupply": 912500.0
+  },
+  "vp": {
+   "R_km": 24.145673876629047,
+   "V": 18.72343420578466,
+   "MTOW": 13.954702569423647,
+   "E_Wh": 1198.8,
+   "Euse_Wh": 815.184,
+   "Pcl": 1165.3075304346546,
+   "Pce": 999.1899923893626,
+   "Phl": 1342.9209647119137,
+   "Phe": 1045.9811282606115
+  },
+  "x": [
+   0.7874,
+   1198.8,
+   0.04,
+   0.002,
+   18.72343420578466
+  ],
+  "relays": [],
+  "relay_P09_used": false,
+  "cost_milp": 24269813.308968753
+ },
+ "R26": {
+  "cost": 24562751.177376952,
+  "hubs": {
+   "H2": {
+    "phcs": [
+     "P13",
+     "P14",
+     "P15",
+     "P16",
+     "P17"
+    ],
+    "drones": 4,
+    "bays": 3,
+    "operators_per_shift": 1
+   },
+   "H3": {
+    "phcs": [
+     "P04",
+     "P05",
+     "P06",
+     "P07",
+     "P09"
+    ],
+    "drones": 4,
+    "bays": 3,
+    "operators_per_shift": 1
+   },
+   "H4": {
+    "phcs": [
+     "P08",
+     "P10",
+     "P18",
+     "P19",
+     "P20",
+     "P21",
+     "P24"
+    ],
+    "drones": 4,
+    "bays": 3,
+    "operators_per_shift": 1
+   },
+   "H5": {
+    "phcs": [
+     "P01",
+     "P02",
+     "P03",
+     "P11",
+     "P12",
+     "P22",
+     "P23"
+    ],
+    "drones": 6,
+    "bays": 4,
+    "operators_per_shift": 2
+   }
+  },
+  "road_only": [],
+  "blood_mode": "relay",
+  "blood_hub": "H0",
+  "blood_from_H0": [],
+  "blood_by_road": [],
+  "blood_frac": 0.0,
+  "resupply": {
+   "H2": {
+    "mode": "road",
+    "route": [
+     "H0",
+     "H2"
+    ],
+    "km": 25.8
+   },
+   "H3": {
+    "mode": "road",
+    "route": [
+     "H0",
+     "H3"
+    ],
+    "km": 26.0
+   },
+   "H4": {
+    "mode": "road",
+    "route": [
+     "H0",
+     "H4"
+    ],
+    "km": 17.0
+   },
+   "H5": {
+    "mode": "road",
+    "route": [
+     "H0",
+     "H5"
+    ],
+    "km": 19.6
+   }
+  },
+  "breakdown": {
+   "hubs": 2771766.843154083,
+   "drones_and_spares": 9172825.084977802,
+   "bays": 308643.05252985196,
+   "operators": 7560000.000000003,
+   "energy_wear_and_weather_road": 4349425.782587133,
+   "road_only_PHCs": 0.0,
+   "blood_by_drone": 0.0,
+   "blood_by_road": 0.0,
+   "blood_resupply": 730000.0
+  },
+  "vp": {
+   "R_km": 26.192682822614117,
+   "V": 19.64535415099785,
+   "MTOW": 15.560744760586067,
+   "E_Wh": 1420.8,
+   "Euse_Wh": 966.144,
+   "Pcl": 1324.0669822196592,
+   "Pce": 1159.8166445859247,
+   "Phl": 1538.2387598104458,
+   "Phe": 1235.35316831206
+  },
+  "x": [
+   0.7874,
+   1420.8,
+   0.04,
+   0.002,
+   19.64535415099785
+  ],
+  "relays": [],
+  "relay_P09_used": false,
+  "cost_milp": 24562751.177376952
+ },
+ "R24_H0forced": {
+  "cost": 24259391.584389243,
+  "hubs": {
+   "H0": {
+    "phcs": [
+     "P08",
+     "P10",
+     "P11",
+     "P20",
+     "P21",
+     "P22"
+    ],
+    "drones": 4,
+    "bays": 3,
+    "operators_per_shift": 1
+   },
+   "H1": {
+    "phcs": [
+     "P01",
+     "P02",
+     "P03",
+     "P04",
+     "P23"
+    ],
+    "drones": 4,
+    "bays": 2,
+    "operators_per_shift": 1
+   },
+   "H2": {
+    "phcs": [
+     "P12",
+     "P13",
+     "P14",
+     "P15",
+     "P16"
+    ],
+    "drones": 4,
+    "bays": 3,
+    "operators_per_shift": 1
+   },
+   "H3": {
+    "phcs": [
+     "P05",
+     "P06",
+     "P07",
+     "P09"
+    ],
+    "drones": 3,
+    "bays": 2,
+    "operators_per_shift": 1
+   },
+   "H6": {
+    "phcs": [
+     "P17",
+     "P18",
+     "P19",
+     "P24"
+    ],
+    "drones": 3,
+    "bays": 2,
+    "operators_per_shift": 1
+   }
+  },
+  "road_only": [],
+  "blood_mode": "relay",
+  "blood_hub": "H0",
+  "blood_from_H0": [],
+  "blood_by_road": [],
+  "blood_frac": 0.0,
+  "resupply": {
+   "H1": {
+    "mode": "drone",
+    "route": [
+     "H0",
+     "H5",
+     "H1"
+    ],
+    "km": 37.2
+   },
+   "H2": {
+    "mode": "drone",
+    "route": [
+     "H0",
+     "H5",
+     "H2"
+    ],
+    "km": 40.7
+   },
+   "H3": {
+    "mode": "drone",
+    "route": [
+     "H0",
+     "P09",
+     "H3"
+    ],
+    "km": 28.3
+   },
+   "H6": {
+    "mode": "drone",
+    "route": [
+     "H0",
+     "H4",
+     "H6"
+    ],
+    "km": 32.0
+   }
+  },
+  "breakdown": {
+   "hubs": 3464708.553942604,
+   "drones_and_spares": 8419231.436481442,
+   "bays": 284901.2792583249,
+   "operators": 7560000.0,
+   "energy_wear_and_weather_road": 3974120.926944295,
+   "road_only_PHCs": 0.0,
+   "blood_by_drone": 0.0,
+   "blood_by_road": 0.0,
+   "blood_resupply": 556429.3877625756
+  },
+  "vp": {
+   "R_km": 24.145673876629047,
+   "V": 18.72343420578466,
+   "MTOW": 13.954702569423647,
+   "E_Wh": 1198.8,
+   "Euse_Wh": 815.184,
+   "Pcl": 1165.3075304346546,
+   "Pce": 999.1899923893626,
+   "Phl": 1342.9209647119137,
+   "Phe": 1045.9811282606115
+  },
+  "relays": [
+   "H4",
+   "H5",
+   "P09"
+  ],
+  "relay_P09_used": true,
+  "cost_milp": 24432962.196626667
+ }
+}

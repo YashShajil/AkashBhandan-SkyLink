@@ -1,0 +1,7 @@
+case,best_vehicle,M4_cost_MINR,hubs,drones
+baseline,R24,24.269813308968754,H1 H2 H3 H4 H5,18
+battery specific energy +20% (re-sized vehicles),R22,23.43519106865621,H0 H1 H2 H3 H6,20
+drone price -30%,R24,21.80131203894328,H1 H2 H3 H4 H5,18
+"demand +15%/yr, year 1 (x1.15)",R24,25.915535724121916,H1 H2 H3 H4 H5,20
+"demand +15%/yr, year 2 (x1.32)",R22,29.62321572097161,H0 H1 H2 H3 H5 H6,24
+"demand +15%/yr, year 3 (x1.52)",R22,33.372305746302494,H0 H1 H2 H3 H5 H6,27
