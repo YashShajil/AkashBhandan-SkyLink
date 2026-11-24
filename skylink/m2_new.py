@@ -292,7 +292,13 @@ def plate_load_N():
     """Plate load = 2 x battery weight of the current M1 design (2g max-thrust case).
     Uses R_REQ from m1_vehicle.py, so the load follows whatever range you set."""
     from . import m1_vehicle as m1
-    x, o, _ = m1.solve_mdf(m1.Vehicle(m_plate=0.25), m1.R_REQ)
+    fm = None
+    try:
+        from . import m3_surrogate as m3
+        k, _, _ = m3.fit_all(make_figs=False); fm = m3.fm_function(k)
+    except Exception:
+        pass
+    x, o, _ = m1.solve_mdf(m1.Vehicle(m_plate=0.25, fm=fm), m1.R_REQ)
     return 2 * 9.81 * x[1] / m1.EB          # x[1] = battery energy E (Wh), EB = 150 Wh/kg
 
 
@@ -376,10 +382,17 @@ def run(F_total=None, n=64, vfs=(0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5)):
 def rerun_m1(m_plate):
     """Brief: 'Put the new plate mass back into M1 and re-run once'. Uses R_REQ from m1_vehicle.py."""
     from . import m1_vehicle as m1
-    r0, d0, _ = m1.run(m_plate=0.25, tag="m1_base", make_figs=False, quick=True)
-    r1, d1, _ = m1.run(m_plate=m_plate, tag="m1_plate", make_figs=False, quick=True)
+    fm = None
+    try:
+        from . import m3_surrogate as m3
+        k, _, _ = m3.fit_all(make_figs=False); fm = m3.fm_function(k)
+    except Exception:
+        pass
+    r0, d0, _ = m1.run(m_plate=0.25, fm=fm, tag="m1_base", make_figs=False, quick=True)
+    r1, d1, _ = m1.run(m_plate=m_plate, fm=fm, tag="m1_plate", make_figs=False, quick=True)
     a, b = r0["mdf"], r1["mdf"]
-    print(f"\n=== M1 re-run with the M2 plate (R >= {m1.R_REQ:g} km, FM = 0.65) ===")
+    fm_str = "M3 surrogate" if fm is not None else "FM = 0.65"
+    print(f"\n=== M1 re-run with the M2 plate (R >= {m1.R_REQ:g} km, {fm_str}) ===")
     print(f"{'':22s}{'plate 0.250 kg':>16s}{f'plate {m_plate:.3f} kg':>18s}{'change':>12s}")
     for lab, k, f in [("MTOW (kg)", "MTOW_kg", "{:.4f}"), ("battery E (Wh)", "E_Wh", "{:.1f}"), ("rotor D (m)", "D_m", "{:.3f}"),
                       ("tube t (mm)", "t_mm", "{:.3f}"), ("cruise V (m/s)", "V_ms", "{:.2f}"), ("radius R (km)", "R_km", "{:.2f}")]:

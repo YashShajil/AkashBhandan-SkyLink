@@ -125,7 +125,7 @@ def run(sols, front, designs, m_plate, fm, tag="m7"):
     cands = pick_candidates(front)
     rob, weeks = robustness(front, cands)
     from multiprocessing import Pool
-    procs = max(1, min(4, os.cpu_count() or 1))
+    procs = max(1, min(8, os.cpu_count() or 1))
     with Pool(procs, initializer=m6._init, initargs=(sols, [k for k in sols if not k.endswith("forced")])) as pool:
         rel = reliability(front, cands, pool=pool)
     # decision rule: lowest cost among candidates with typical-week S45 >= 90% and P(S45>=90%) >= 0.8;
